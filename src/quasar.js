@@ -23,7 +23,7 @@ import {
   QRouteTab,
   QMenu,
   ClosePopup,
-  QParallax
+  QCard,
 } from "quasar";
 
 Vue.use(Quasar, {
@@ -45,7 +45,7 @@ Vue.use(Quasar, {
     QTab,
     QRouteTab,
     QMenu,
-    QParallax
+    QCard,
   },
   directives: {
     ClosePopup
