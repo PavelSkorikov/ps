@@ -1,7 +1,7 @@
 <template>
   <q-header elevated>
     <q-toolbar class="row no-wrap glossy bg-black fixed">
-      <q-btn icon="menu" class="lt-sm">
+      <q-btn icon="menu" class="lt-sm" style="font-size: 2em">
         <q-menu
           transition-show="scale"
           transition-hide="scale"
@@ -40,10 +40,9 @@ export default {
   data() {
     return {
       menu: [
-        { name: "services", label: "навыки" },
+        { name: "experience", label: "Чем я занимаюсь" },
         { name: "portfolio", label: "Портфолио" },
         { name: "about", label: "Обо мне" },
-        { name: "blog", label: "блог" },
         { name: "contacts", label: "контакты" }
       ]
     };

@@ -13,6 +13,7 @@ import {
   QToolbar,
   QToolbarTitle,
   QBtn,
+  QBtnToggle,
   QIcon,
   QList,
   QItem,
@@ -24,6 +25,13 @@ import {
   QMenu,
   ClosePopup,
   QCard,
+  QCardSection,
+  QCardActions,
+  QLinearProgress,
+  QBadge,
+  QCarousel,
+  QCarouselControl,
+  QCarouselSlide
 } from "quasar";
 
 Vue.use(Quasar, {
@@ -36,6 +44,7 @@ Vue.use(Quasar, {
     QToolbar,
     QToolbarTitle,
     QBtn,
+    QBtnToggle,
     QIcon,
     QList,
     QItem,
@@ -46,6 +55,13 @@ Vue.use(Quasar, {
     QRouteTab,
     QMenu,
     QCard,
+    QCardSection,
+    QCardActions,
+    QLinearProgress,
+    QBadge,
+    QCarousel,
+    QCarouselControl,
+    QCarouselSlide
   },
   directives: {
     ClosePopup
