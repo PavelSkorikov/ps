@@ -7,11 +7,16 @@
       </div>
       <div class="row justify-center">
         <div class="col-6">
-          <div class="text-h6 text-white q-pa-lg">Есть вопрос или желание вместе поработать?</div>
+          <div
+            class="text-h6 text-white"
+            style="text-align: center; margin-bottom:40px;">
+            Есть вопрос или желание вместе поработать?
+          </div>
           <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md">
-            <q-field outlined dark label="Имя" v-model="name">
+             <q-input filled color="red-10" v-model="name" dark label="Имя" />
+             <q-input filled color="red-10" v-model="email" type="email" dark label="Email" />
+             <q-input filled color="red-10" v-model="message" type="textarea" dark label="Ваше сообщение" />
               
-            </q-field>
           </q-form>
         </div>
       </div>
@@ -24,13 +29,15 @@ export default {
   data () {
     return {
       name: "",
+      email: "",
+      message: "",
     }
   }
 };
 </script>
 <style lang="scss" scoped>
 .contact {
-  padding: 50px 0 50px 0;
+  padding: 100px 0 100px 0;
   @media (max-width: 900px) {
     padding: 20px 0 20px 0;
   }
