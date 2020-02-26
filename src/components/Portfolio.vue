@@ -47,13 +47,6 @@ export default {
         {img: "https://cdn.quasar.dev/img/mountains.jpg", title: 'Our Changing Planet', note: 'by John Doe'},
         {img: "https://cdn.quasar.dev/img/mountains.jpg", title: 'Our Changing Planet', note: 'by John Doe'},
         {img: "https://cdn.quasar.dev/img/mountains.jpg", title: 'Our Changing Planet', note: 'by John Doe'},
-        {img: "https://cdn.quasar.dev/img/mountains.jpg", title: 'Our Changing Planet', note: 'by John Doe'},
-        {img: "https://cdn.quasar.dev/img/mountains.jpg", title: 'Our Changing Planet', note: 'by John Doe'},
-        {img: "https://cdn.quasar.dev/img/mountains.jpg", title: 'Our Changing Planet', note: 'by John Doe'},
-        {img: "https://cdn.quasar.dev/img/mountains.jpg", title: 'Our Changing Planet', note: 'by John Doe'},
-        {img: "https://cdn.quasar.dev/img/mountains.jpg", title: 'Our Changing Planet', note: 'by John Doe'},
-        {img: "https://cdn.quasar.dev/img/mountains.jpg", title: 'Our Changing Planet', note: 'by John Doe'},
-        {img: "https://cdn.quasar.dev/img/mountains.jpg", title: 'Our Changing Planet', note: 'by John Doe'},
       ]
     }
   }

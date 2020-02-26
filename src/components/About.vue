@@ -1,8 +1,8 @@
 <template>
-  <section class="about bg-grey-10">
+  <section class="about bg-grey-3">
     <div class="row justify-center">
-      <div class="col-9 q-pa-xs">
-        <div class="about__title text-white">
+      <div class="col-xs-12 col-lg-9 q-pa-md">
+        <div class="about__title">
           обо мне
           <div class="about__title-line"></div>
         </div>
@@ -10,18 +10,11 @@
     </div>
     <div class="row justify-center about__main">
       <div class="col-xs-12 col-md-9 q-pa-xs">
-        <div class="row q-gutter-xl">
-          <div class="col-xs-12 col-lg-4">
-            <q-card class="about__card">
-              <img src="@/assets/images/my.jpg"/>
+        <div class="row q-gutter-xl justify-center">
+          <div class="col-xs-10 col-sm-6 col-md-6 col-lg-4">
+            <q-card>
+              <img src="@/assets/images/my.jpg" />
               <q-card-section>
-                <q-btn
-                  fab
-                  color="primary"
-                  icon="mail"
-                  class="absolute"
-                  style="top: 0; right: 12px; transform: translateY(-50%);"
-                />
                 <div class="row no-wrap items-center">
                   <div class="col text-h6 ellipsis">
                     Павел Скориков
@@ -36,39 +29,48 @@
                 <div class="text-subtitle1">
                   Образование
                 </div>
-                <div class="text-caption text-grey">
+                <div class="text-caption1 text-grey">
                   Окончил Новочеркасский государственный технический университет
                   (НГТУ) по специальности "Промышленная электроника"
+                </div>
+                <div class="text-caption1 text-grey">
+                  Имеется университетская база по программированию на языках высокого и низкого уровня (Pascal, Assembler)
                 </div>
                 <div class="text-subtitle1">
                   Работа
                 </div>
-                <div class="text-caption text-grey">
+                <div class="text-caption1 text-grey">
                   Участвовал в разработке корпоративного портала дистанционного
                   обучения в области информационной безопасности.
                 </div>
-                <div class="text-caption text-grey">
+                <div class="text-caption1 text-grey">
                   Разрабатывал на языке Python скрипты автоматизации.
                 </div>
-                <div class="text-caption text-grey">
+                <div class="text-caption1 text-grey">
                   Разработка парссеров и чат-ботов.
                 </div>
+                <div class="text-caption1 text-grey">
+                  В настоящее время занимаюсь разработкой Web - приложений SPA PWA SSR как front так и back составляющей.
+                </div>
+                <q-separator/>
+                <br>
+                <a href="https://github.com/PavelSkorikov?tab=repositories"><p>Мой GitHub</p></a>
               </q-card-section>
             </q-card>
           </div>
 
-          <div class="col-xs-12 col-lg-7">
+          <div class="col-xs-10 col-sm-11 col-md-12 col-lg-7  justify-between">
             <q-linear-progress
               v-for="progress in progresses"
               :key="progress"
               size="25px"
               :value="progress.percent"
               color="red-10"
-              track-color="white"
+              track-color="grey-10  "
               class="about__progress"
             >
               <div
-                class="absolute-full flex content-center text-h6 text-white q-pa-sm"
+                class="absolute-full flex content-center text-h6 text-white q-pa-sm about__progress-string"
               >
                 {{ progress.label }}
               </div>
@@ -80,16 +82,27 @@
                 />
               </div>
             </q-linear-progress>
-
-            <q-carousel arrows animated v-model="slide" height="500px" control-text-color="black">
-              <q-carousel-slide
-                v-for="slide in slides"
-                :key="slide"
-                :name="slide.name"
-                :img-src="slide.url"
+            <div class="about__carousel">
+              <q-carousel
+                arrows
+                swipeable
+                animated
+                v-model="slide"
+                control-text-color="black"
+                height="100%"
+                width="100%"
+                class="shadow-10"
               >
-              </q-carousel-slide>
-            </q-carousel>
+                <q-carousel-slide
+                  v-for="slide in slides"
+                  :key="slide"
+                  :name="slide.name"
+                  :img-src="slide.url"
+                  class="fit shadow-5"
+                >
+                </q-carousel-slide>
+              </q-carousel>
+            </div>
           </div>
         </div>
       </div>
@@ -100,7 +113,7 @@
           <div
             v-for="skill in skills"
             :key="skill"
-            class="col-xs-12 col-md-3 q-pa-xs text-white column items-center"
+            class="col-xs-12 col-sm-6 col-md-3 q-pa-xs text-white column items-center"
             style="font-size: 4em"
           >
             <q-icon :name="skill.icon"></q-icon>
@@ -123,23 +136,23 @@ export default {
       slides: [
         {
           name: 'slide1',
-          url: 'https://stepik.org/certificate/500d9dd95a9adc63efd85ad088bf7fb92a864c18.png'
+          url: "/images/1.png"
         },
         {
           name: 'slide2',
-          url: 'https://stepik.org/certificate/7f5c6f9aff6e44749af58b18e117dc4c0cd114ee.png'
+          url: "/images/2.png"
         },
         {
           name: 'slide3',
-          url: 'https://stepik.org/certificate/fadfee53327713365ef571ab22ef5a3e912e51d1.png'
+          url: "/images/3.png"
         },
         {
           name: 'slide4',
-          url: 'https://stepik.org/certificate/34cc7c8f24026dd32a4015402f5330a75c2de675.png'
+          url: "/images/4.png"
         },
         {
           name: 'slide5',
-          url: 'https://stepik.org/certificate/c1bbe1e76a49bf01e68dead3c5321d27ac8ed98e.png'
+          url: "/images/5.png"
         },
 
       ],
@@ -224,6 +237,7 @@ export default {
     line-height: 60px;
     font-weight: 700;
     text-transform: uppercase;
+    color: #363636;
     @media (max-width: 900px) {
       font-size: 36px;
     }
@@ -231,13 +245,32 @@ export default {
   &__title-line {
     width: 100%;
     height: 10px;
-    background-color: white;
+    background-color: #363636;
   }
   &__main {
     padding-bottom: 50px;
   }
   &__progress {
     margin-bottom: 20px;
+  }
+  &__progress-string{
+    @media (max-width: 600px) {
+      font-size: 11px;
+    }
+  }
+  &__carousel{
+    max-width: 850px;
+    height: 550px;
+    @media (max-width: 760px) {
+      max-width: 500px;
+      height: 350px;
+    }
+     @media (max-width: 520px) {
+      max-width: 350px;
+      height: 230px;
+    }
+  
+  
   }
 }
 .custom-caption{

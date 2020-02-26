@@ -1,7 +1,7 @@
 <template>
   <q-header elevated>
     <q-toolbar class="row no-wrap glossy bg-black fixed">
-      <q-btn icon="menu" class="lt-sm" style="font-size: 2em">
+      <q-btn icon="menu" class="lt-sm" style="font-size: 1em">
         <q-menu
           transition-show="scale"
           transition-hide="scale"

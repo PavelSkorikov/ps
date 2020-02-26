@@ -31,7 +31,10 @@ import {
   QBadge,
   QCarousel,
   QCarouselControl,
-  QCarouselSlide
+  QCarouselSlide,
+  QSeparator,
+  QForm,
+  QField
 } from "quasar";
 
 Vue.use(Quasar, {
@@ -61,7 +64,10 @@ Vue.use(Quasar, {
     QBadge,
     QCarousel,
     QCarouselControl,
-    QCarouselSlide
+    QCarouselSlide,
+    QSeparator,
+    QForm,
+    QField
   },
   directives: {
     ClosePopup

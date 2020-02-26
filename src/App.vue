@@ -3,6 +3,7 @@
     <Header />
     <img
       style="width: 100%; height: auto; opacity: 0.9; vertical-align:bottom;"
+      class="flex-auto"
       src="./assets/images/header-bg.jpg"
       alt=""
     />
