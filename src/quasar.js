@@ -34,7 +34,8 @@ import {
   QCarouselSlide,
   QSeparator,
   QForm,
-  QInput
+  QInput,
+  QFooter
 } from "quasar";
 
 Vue.use(Quasar, {
@@ -67,7 +68,8 @@ Vue.use(Quasar, {
     QCarouselSlide,
     QSeparator,
     QForm,
-    QInput
+    QInput,
+    QFooter
   },
   directives: {
     ClosePopup

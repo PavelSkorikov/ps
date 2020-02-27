@@ -40,8 +40,8 @@ export default {
   data() {
     return {
       menu: [
-        { name: "experience", label: "Чем я занимаюсь" },
-        { name: "portfolio", label: "Портфолио" },
+        { name: "experience", label: "Чем я занимаюсь", to: "" },
+        { name: "portfolio", label: "Портфолио", to: "" },
         { name: "about", label: "Обо мне" },
         { name: "contacts", label: "контакты" }
       ]

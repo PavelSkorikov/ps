@@ -4,6 +4,7 @@
     <Portfolio />
     <About />
     <Contact />
+    <Footer/>
   </q-page>
 </template>
 
@@ -12,6 +13,7 @@ import Experience from "../components/Experience";
 import Portfolio from "../components/Portfolio";
 import About from "../components/About";
 import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 
 export default {
   name: "Home",
@@ -19,12 +21,8 @@ export default {
     Experience,
     Portfolio,
     About,
-    Contact
+    Contact,
+    Footer
   }
 };
 </script>
-<style lang="scss" scoped>
-  .bl{
-
-  }
-</style>
