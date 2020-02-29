@@ -20,16 +20,18 @@
       </div>
       <div class="row justify-center">
         <div v-for="card in cards" :key="card" class="col-auto q-pa-sm">
-          <q-card class="portfolio__card">
-            <img :src="card.img">
-            <q-card-section>
-              <div class="text-h6">{{ card.title }}</div>
-              <div class="text-subtitle2">{{ card.note }}</div>
-            </q-card-section>
-            <q-card-section class="q-pt-none">
-              {{ lorem }}
-            </q-card-section>
-          </q-card>
+          <a :href="card.url" target="_blank">
+            <q-card class="portfolio__card">
+              <img :src="card.img">
+              <q-card-section>
+                <div class="text-h6">{{ card.title }}</div>
+                <div class="text-subtitle2">{{ card.note }}</div>
+              </q-card-section>
+              <q-card-section class="q-pt-none">
+                {{ lorem }}
+              </q-card-section>
+            </q-card>
+          </a>
         </div>
       </div>
     </div>
@@ -42,13 +44,48 @@ export default {
     return {
       portfolio_btn: null,
       cards: [
-        {img: "https://cdn.quasar.dev/img/mountains.jpg", title: 'Our Changing Planet', note: 'by John Doe'},
-        {img: "https://cdn.quasar.dev/img/mountains.jpg", title: 'Our Changing Planet', note: 'by John Doe'},
-        {img: "https://cdn.quasar.dev/img/mountains.jpg", title: 'Our Changing Planet', note: 'by John Doe'},
-        {img: "https://cdn.quasar.dev/img/mountains.jpg", title: 'Our Changing Planet', note: 'by John Doe'},
-        {img: "https://cdn.quasar.dev/img/mountains.jpg", title: 'Our Changing Planet', note: 'by John Doe'},
-        {img: "https://cdn.quasar.dev/img/mountains.jpg", title: 'Our Changing Planet', note: 'by John Doe'},
-        {img: "https://cdn.quasar.dev/img/mountains.jpg", title: 'Our Changing Planet', note: 'by John Doe'},
+        {
+          img: "images/portfolio/my_friends.png",
+          title: 'Приют домашних животных',
+          note: 'лэндинг на Vue.js без использования UI/UX фреймворков',
+          url: 'https://mylittlefriend.onrender.com'
+        },
+        {
+          img: "images/portfolio/audioplayer.png",
+          title: 'Аудиоплеер',
+          note: 'Кастом-тег <Audioplayer /> - позволяет добавить на страницу неограниченное число независимых плееров с богатым функционалом, которые могут проигрывать mp3 файлы с компьютера пользователя. Проект сделан на чистом JS.',
+          url: '#'
+        },
+        {
+          img: "https://cdn.quasar.dev/img/mountains.jpg",
+          title: 'Our Changing Planet',
+          note: 'by John Doe',
+          url: '#'
+        },
+        {
+          img: "https://cdn.quasar.dev/img/mountains.jpg",
+          title: 'Our Changing Planet',
+          note: 'by John Doe',
+          url: '#'
+        },
+        {
+          img: "https://cdn.quasar.dev/img/mountains.jpg",
+          title: 'Our Changing Planet',
+          note: 'by John Doe',
+          url: '#'
+        },
+        {
+          img: "https://cdn.quasar.dev/img/mountains.jpg",
+          title: 'Our Changing Planet',
+          note: 'by John Doe',
+          url: '#'
+        },
+        {
+          img: "https://cdn.quasar.dev/img/mountains.jpg",
+          title: 'Our Changing Planet',
+          note: 'by John Doe',
+          url: '#'
+        },
       ]
     }
   }
@@ -58,7 +95,7 @@ export default {
 .portfolio {
   padding: 100px 0 100px 0;
   @media (max-width: 900px) {
-    padding: 20px 0 20px 0;
+    padding: 50px 0 50px 0;
   }
   &__title {
     max-width: 370px;
@@ -79,6 +116,14 @@ export default {
   }
   &__card{
     max-width: 280px;
+    height: 370px;
   }
+}
+img{
+      height: 150px;
+    }
+a {
+  text-decoration: none;
+  color: #363636;
 }
 </style>

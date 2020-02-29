@@ -1,20 +1,25 @@
 <template>
   <footer bordered class="bg-black text-white">
     <q-tabs
-      no-caps
       active-color="red-10"
       indicator-color="transparent"
       class="text-grey"
     >
-      <q-tab name="mail" icon="mail" @click="sendmail" />
+      <q-tab name="mail" icon="mail" @click="sendmail" class="q-gutter-xs" />
       <a href="https://vk.com/skorikov1975" target="_blank">
-        <q-tab name="vk" icon="img:/images/vk16.ico" />
+        <q-tab name="vk" icon="img:/images/vk16.ico" class="q-gutter-xs" />
       </a>
       <a href="https://web.facebook.com/p.skorikov" target="_blank">
-        <q-tab name="fb" icon="img:/images/fb.svg" />
+        <q-tab name="fb" icon="img:/images/fb.svg" class="q-gutter-xs" />
       </a>
        <a href="https://github.com/PavelSkorikov?tab=repositories" target="_blank">
-        <q-tab name="github" icon="img:/images/github.ico" />
+        <q-tab name="github" icon="img:/images/github.ico" class="q-gutter-xs" />
+      </a>
+      <a href="skype:spg75_2" target="_blank">
+        <q-tab name="github" icon="img:/images/skype.ico" class="q-gutter-xs" />
+      </a>
+      <a href="tg://resolve?domain=Pavel_Skorikov" target="_blank">
+        <q-tab name="github" icon="img:/images/telegram.ico" class="q-gutter-xs" />
       </a>
     </q-tabs>
     <div class="row justify-center">
@@ -34,4 +39,3 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped></style>

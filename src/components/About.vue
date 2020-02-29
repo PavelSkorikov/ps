@@ -15,6 +15,16 @@
             <q-card>
               <img src="@/assets/images/my.jpg" />
               <q-card-section>
+                <q-btn
+                  fab
+                  color="red-10"
+                  icon="mail"
+                  class="absolute"
+                  style="top: 0; right: 12px; transform: translateY(-50%);"
+                  @click="sendmail"
+                />
+              </q-card-section>
+              <q-card-section>
                 <div class="row no-wrap items-center">
                   <div class="col text-h6 ellipsis">
                     Павел Скориков
@@ -34,7 +44,8 @@
                   (НГТУ) по специальности "Промышленная электроника"
                 </div>
                 <div class="text-caption1 text-grey">
-                  Имеется университетская база по программированию на языках высокого и низкого уровня (Pascal, Assembler)
+                  Имеется университетская база по программированию на языках
+                  высокого и низкого уровня (Pascal, Assembler)
                 </div>
                 <div class="text-subtitle1">
                   Работа
@@ -50,11 +61,14 @@
                   Разработка парссеров и чат-ботов.
                 </div>
                 <div class="text-caption1 text-grey">
-                  В настоящее время занимаюсь разработкой Web - приложений SPA PWA SSR как front так и back составляющей.
+                  В настоящее время занимаюсь разработкой Web - приложений SPA
+                  PWA SSR как front так и back составляющей.
                 </div>
-                <q-separator/>
-                <br>
-                <a href="https://github.com/PavelSkorikov?tab=repositories"><p>Мой GitHub</p></a>
+                <q-separator />
+                <br />
+                <a href="https://github.com/PavelSkorikov?tab=repositories"
+                  ><p>Мой GitHub</p></a
+                >
               </q-card-section>
             </q-card>
           </div>
@@ -84,10 +98,11 @@
             </q-linear-progress>
             <div class="about__carousel">
               <q-carousel
-                arrows
                 swipeable
                 animated
+                infinite
                 v-model="slide"
+                ref="carousel"
                 control-text-color="black"
                 height="100%"
                 width="100%"
@@ -101,6 +116,32 @@
                   class="fit shadow-5"
                 >
                 </q-carousel-slide>
+                <template v-slot:control>
+                  <q-carousel-control
+                    position="top-right"
+                    :offset="[10, 0]"
+                    class="q-gutter-sm lt-xs"
+                  >
+                    <q-btn
+                      push
+                      round
+                      dense
+                      color="grey-2"
+                      text-color="red-10"
+                      icon="arrow_left"
+                      @click="$refs.carousel.previous()"
+                    />
+                    <q-btn
+                      push
+                      round
+                      dense
+                      color="grey-2"
+                      text-color="red-10"
+                      icon="arrow_right"
+                      @click="$refs.carousel.next()"
+                    />
+                  </q-carousel-control>
+                </template>
               </q-carousel>
             </div>
           </div>
@@ -132,29 +173,28 @@ export default {
   name: "About",
   data() {
     return {
-      slide: 'slide1',
+      slide: "slide1",
       slides: [
         {
-          name: 'slide1',
+          name: "slide1",
           url: "/images/1.png"
         },
         {
-          name: 'slide2',
+          name: "slide2",
           url: "/images/2.png"
         },
         {
-          name: 'slide3',
+          name: "slide3",
           url: "/images/3.png"
         },
         {
-          name: 'slide4',
+          name: "slide4",
           url: "/images/4.png"
         },
         {
-          name: 'slide5',
+          name: "slide5",
           url: "/images/5.png"
-        },
-
+        }
       ],
       progresses: [
         {
@@ -192,7 +232,7 @@ export default {
         {
           label: "SQL БД",
           percent: 0.7
-        },
+        }
       ],
       skills: [
         {
@@ -221,14 +261,19 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    sendmail() {
+      window.open("mailto:spg75@yandex.ru");
+    }
   }
 };
 </script>
 <style lang="scss" scoped>
 .about {
   padding-top: 100px;
-  @media (max-width: 900px) {
-    padding: 20px 0 20px 0;
+  @media (max-width: 600px) {
+    padding: 50px 0 50px 0;
   }
   &__title {
     max-width: 370px;
@@ -253,30 +298,28 @@ export default {
   &__progress {
     margin-bottom: 20px;
   }
-  &__progress-string{
+  &__progress-string {
     @media (max-width: 600px) {
       font-size: 11px;
     }
   }
-  &__carousel{
+  &__carousel {
     max-width: 850px;
     height: 550px;
     @media (max-width: 760px) {
       max-width: 500px;
       height: 350px;
     }
-     @media (max-width: 520px) {
+    @media (max-width: 520px) {
       max-width: 350px;
       height: 230px;
     }
-  
-  
   }
 }
-.custom-caption{
+.custom-caption {
   text-align: center;
   padding: 12px;
   color: white;
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 </style>
