@@ -73,18 +73,18 @@
             </q-card>
           </div>
 
-          <div class="col-xs-10 col-sm-11 col-md-12 col-lg-7  justify-between">
+          <div class="col-xs-10 col-sm-11 col-md-12 col-lg-7">
             <q-linear-progress
               v-for="progress in progresses"
               :key="progress.label"
-              size="25px"
+              size="30px"
               :value="progress.percent"
               color="red-10"
               track-color="grey-10  "
               class="about__progress"
             >
               <div
-                class="absolute-full flex content-center text-h6 text-white q-pa-sm about__progress-string"
+                class="absolute-full text-h6 text-white about__progress-string"
               >
                 {{ progress.label }}
               </div>
@@ -150,7 +150,7 @@
     </div>
     <div class="row bg-red-10 justify-center">
       <div class="col-9">
-        <div class="row items-center">
+        <div class="row items-center content-center skills">
           <div
             v-for="skill in skills"
             :key="skill.title"
@@ -159,7 +159,7 @@
           >
             <q-icon :name="skill.icon"></q-icon>
             <div class="text-h6">{{ skill.title }}</div>
-            <div class="text-subtitle2" style="text-align: center;">
+            <div class="text-subtitle2" style="text-align: center; width: 100%;">
               {{ skill.note }}
             </div>
           </div>
@@ -206,7 +206,7 @@ export default {
           percent: 0.7
         },
         {
-          label: "BOOTSTRAP4, QUASAR",
+          label: "Bootstrap4, Quasar",
           percent: 0.9
         },
         {
@@ -214,7 +214,7 @@ export default {
           percent: 0.7
         },
         {
-          label: "Vue.js, Vuex, Vue-router",
+          label: "Vue.js",
           percent: 0.8
         },
         {
@@ -226,7 +226,7 @@ export default {
           percent: 0.7
         },
         {
-          label: "WORDPRESS REST API",
+          label: "WORDPRESS",
           percent: 0.4
         },
         {
@@ -296,9 +296,10 @@ export default {
     padding-bottom: 50px;
   }
   &__progress {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   &__progress-string {
+    margin-left: 10px;
     @media (max-width: 600px) {
       font-size: 11px;
     }
@@ -306,6 +307,7 @@ export default {
   &__carousel {
     max-width: 850px;
     height: 550px;
+    margin-top: 30px;
     @media (max-width: 760px) {
       max-width: 500px;
       height: 350px;

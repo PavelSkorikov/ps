@@ -51,7 +51,7 @@ export default {
           img: "images/portfolio/audioplayer.png",
           title: 'Аудиоплеер',
           note: 'Кастом-тег <Audioplayer /> - позволяет добавить на страницу неограниченное число независимых плееров с богатым функционалом, которые могут проигрывать mp3 файлы с компьютера пользователя. Проект сделан на чистом JS.',
-          url: '#'
+          url: 'https://pavelskorikov.github.io/Audio_player/'
         },
         {
           img: "https://cdn.quasar.dev/img/mountains.jpg",
