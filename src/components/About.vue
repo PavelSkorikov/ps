@@ -126,7 +126,7 @@
                       push
                       round
                       dense
-                      color="grey-2"
+                      color="grey-4"
                       text-color="red-10"
                       icon="arrow_left"
                       @click="$refs.carousel.previous()"
@@ -135,7 +135,7 @@
                       push
                       round
                       dense
-                      color="grey-2"
+                      color="grey-4"
                       text-color="red-10"
                       icon="arrow_right"
                       @click="$refs.carousel.next()"
