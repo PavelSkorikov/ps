@@ -76,7 +76,7 @@
           <div class="col-xs-10 col-sm-11 col-md-12 col-lg-7  justify-between">
             <q-linear-progress
               v-for="progress in progresses"
-              :key="progress"
+              :key="progress.label"
               size="25px"
               :value="progress.percent"
               color="red-10"
@@ -110,7 +110,7 @@
               >
                 <q-carousel-slide
                   v-for="slide in slides"
-                  :key="slide"
+                  :key="slide.name"
                   :name="slide.name"
                   :img-src="slide.url"
                   class="fit shadow-5"
@@ -153,7 +153,7 @@
         <div class="row items-center">
           <div
             v-for="skill in skills"
-            :key="skill"
+            :key="skill.title"
             class="col-xs-12 col-sm-6 col-md-3 q-pa-xs text-white column items-center"
             style="font-size: 4em"
           >

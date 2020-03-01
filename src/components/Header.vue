@@ -11,7 +11,7 @@
           dark
         >
           <q-list>
-            <q-item v-for="item in menu" :key="item" :to="item.to" clickable v-close-popup>
+            <q-item v-for="item in menu" :key="item.name" :to="item.to" clickable v-close-popup>
               <q-item-section
                 style="width: 250px;
                   text-transform: uppercase;"
@@ -22,10 +22,10 @@
           </q-list>
         </q-menu>
       </q-btn>
-      <q-tabs v-model="tab" class="gt-xs col-sm-12">
+      <q-tabs class="gt-xs col-sm-12">
         <q-route-tab
           v-for="item in menu"
-          :key="item"
+          :key="item.name"
           :name="item.name"
           :label="item.label"
           :to="item.to"

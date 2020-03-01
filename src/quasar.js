@@ -35,11 +35,16 @@ import {
   QSeparator,
   QForm,
   QInput,
-  QFooter
+  QFooter,
+  Notify
 } from "quasar";
 
 Vue.use(Quasar, {
-  config: {},
+  config: {
+    notify: {
+      /* Notify defaults */
+    }
+  },
   components: {
     QLayout,
     QHeader,
@@ -74,5 +79,7 @@ Vue.use(Quasar, {
   directives: {
     ClosePopup
   },
-  plugins: {}
+  plugins: {
+    Notify
+  },
 });

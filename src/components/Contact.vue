@@ -24,7 +24,9 @@
                 label="Имя"
                 lazy-rules
                 :rules="[
-                  val => (val && val.length > 0) || 'Пожалуйста введите Ваше имя'
+                  val =>
+                    (val && val.length > 0) || 'Пожалуйста введите Ваше имя',
+                  val => val.length <= 10 || 'доступно максимум 10 символов'
                 ]"
               />
               <q-input
@@ -34,6 +36,10 @@
                 type="email"
                 dark
                 label="Email"
+                :rules="[
+                  val => (val && val.length > 0) || 'Пожалуйста введите E-mail',
+                  val => val.length <= 20 || 'доступно максимум 20 символов'
+                ]"
               />
               <q-input
                 filled
@@ -42,6 +48,12 @@
                 type="textarea"
                 dark
                 label="Ваше сообщение"
+                :rules="[
+                  val =>
+                    (val && val.length > 0) ||
+                    'Пожалуйста введите текст сообщения',
+                  val => val.length <= 40 || 'доступно максимум 40 символов'
+                ]"
               />
               <q-btn
                 label="Отправить"
@@ -62,7 +74,7 @@
         </div>
       </div>
     </div>
-    <Myfooter/>
+    <Myfooter />
   </section>
 </template>
 <script>
@@ -82,11 +94,36 @@ export default {
       this.name = null;
       this.email = null;
       this.message = null;
+      this.$q.notify({
+        message: "Данные очищены",
+        color: "red-10"
+      });
     },
-    onSubmit() {
-      alert(
-        "Извините, данный функционал пока не доступен :(, но я над этим работаю."
-      );
+    async onSubmit() {
+      let request =
+        "https://sms.ru/sms/send?api_id=" +
+        process.env.VUE_APP_SMS +
+        "&to=" +
+        process.env.VUE_APP_PHONE +
+        "&msg=" +
+        this.name +
+        " " +
+        this.email +
+        " " +
+        this.message +
+        "&json=1";
+      let answer = await fetch(request, { mode: "no-cors" });
+      if (answer.status == "0") {
+        this.$q.notify({
+          message: "Сообщение доставлено",
+          color: "green"
+        });
+      } else {
+        this.$q.notify({
+          message: "Ошибка доставки" + answer.status,
+          color: "red-10"
+        });
+      }
     }
   }
 };
