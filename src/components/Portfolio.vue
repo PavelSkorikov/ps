@@ -42,6 +42,12 @@ export default {
       portfolio_btn: null,
       cards: [
         {
+          img: "images/portfolio/victorina-1945.png",
+          title: 'Викторина о ВОВ 1945г. для школьников',
+          note: 'Приложение SSR на Nuxt.js, Vuex + Element UI',
+          url: 'https://victorina-1945.onrender.com/'
+        },
+        {
           img: "images/portfolio/my_friends.png",
           title: 'Приют домашних животных',
           note: 'лэндинг на Vue.js без использования UI/UX фреймворков',
@@ -52,12 +58,6 @@ export default {
           title: 'Аудиоплеер',
           note: 'Кастом-тег <Audioplayer /> - позволяет добавить на страницу неограниченное число независимых плееров с богатым функционалом, которые могут проигрывать mp3 файлы с компьютера пользователя. Проект сделан на чистом JS.',
           url: 'https://pavelskorikov.github.io/Audio_player/'
-        },
-        {
-          img: "https://cdn.quasar.dev/img/mountains.jpg",
-          title: 'Our Changing Planet',
-          note: 'by John Doe',
-          url: '#'
         },
       ]
     }

@@ -206,15 +206,15 @@ export default {
           percent: 0.7
         },
         {
-          label: "Bootstrap4, Quasar",
+          label: "UI Frameworks",
           percent: 0.9
         },
         {
-          label: "JS, ES6",
+          label: "JavaScript, ES6",
           percent: 0.7
         },
         {
-          label: "Vue.js",
+          label: "Vue.js, Nuxt.js",
           percent: 0.8
         },
         {
@@ -224,10 +224,6 @@ export default {
         {
           label: "Python, Django",
           percent: 0.7
-        },
-        {
-          label: "WORDPRESS",
-          percent: 0.4
         },
         {
           label: "SQL БД",
