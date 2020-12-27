@@ -55,14 +55,10 @@
                   обучения в области информационной безопасности.
                 </div>
                 <div class="text-caption1 text-grey">
-                  Разрабатывал на языке Python скрипты автоматизации.
+                  Разработка Web приложений, API на Django, DRF, GraphQL, gRPC, PostgreSQL.
                 </div>
                 <div class="text-caption1 text-grey">
                   Разработка парссеров и чат-ботов.
-                </div>
-                <div class="text-caption1 text-grey">
-                  В настоящее время занимаюсь разработкой Web - приложений SPA
-                  PWA SSR как front так и back составляющей.
                 </div>
                 <q-separator />
                 <br />
@@ -198,35 +194,35 @@ export default {
       ],
       progresses: [
         {
-          label: "HTML, PUG",
-          percent: 0.8
-        },
-        {
-          label: "CSS, SCSS",
-          percent: 0.7
-        },
-        {
-          label: "UI Frameworks",
-          percent: 0.9
-        },
-        {
-          label: "JavaScript, ES6",
-          percent: 0.7
+          label: "HTML, CSS",
+          percent: 0.6
         },
         {
           label: "Vue.js, Nuxt.js",
-          percent: 0.8
-        },
-        {
-          label: "Node.js, Koa.js",
-          percent: 0.8
-        },
-        {
-          label: "Python, Django",
           percent: 0.7
         },
         {
-          label: "SQL БД",
+          label: "Python",
+          percent: 0.9
+        },
+        {
+          label: "Django, DRF",
+          percent: 0.8
+        },
+        {
+          label: "Flask",
+          percent: 0.7
+        },
+        {
+          label: "graphQL, graphene",
+          percent: 0.6
+        },
+        {
+          label: "gRPC",
+          percent: 0.5
+        },
+        {
+          label: "Docker",
           percent: 0.7
         }
       ],

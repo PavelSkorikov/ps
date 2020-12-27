@@ -42,6 +42,18 @@ export default {
       portfolio_btn: null,
       cards: [
         {
+          img: "images/portfolio/historbis.png",
+          title: 'Карта исторических событий',
+          note: 'Создание API на Django + mySQL + graphQL + Docker',
+          url: 'https://historbis.unitcode.ru/map'
+        },
+        {
+          img: "images/portfolio/FutureRentierBot.png",
+          title: 'Обучающая Телеграм - игра',
+          note: 'Игра с бэкендом на Django + PostgreSQL + Celery + Redis + Docker',
+          url: 'https://tlgg.ru/@FutureRentierBot'
+        },
+        {
           img: "images/portfolio/victorina-1945.png",
           title: 'Викторина о ВОВ 1945г. для школьников',
           note: 'Приложение SSR на Nuxt.js, Vuex + Element UI',

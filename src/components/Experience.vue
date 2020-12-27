@@ -12,7 +12,7 @@
           <q-icon color="white" name="devices" style="font-size: 6em"></q-icon>
         </q-item-section>
         <q-item-section class="text-white">
-          Адаптивная, отзывчивая, кроссбраузерная верстка сайтов, лендингов, веб - приложений.
+          Создание API для сайтов, веб - приложений.
         </q-item-section>
       </q-item>
       <q-item>
@@ -20,7 +20,7 @@
           <q-icon color="white" name="developer_board" style="font-size: 6em"></q-icon>
         </q-item-section>
         <q-item-section class="text-white">
-          Frontend разработка SPA, PWA, SSR приложений с использованием современных фреймворков и библиотек программирования.
+          Упаковка приложения в Docker и деплой на сервер.
         </q-item-section>
       </q-item>
     </q-list>
@@ -38,7 +38,7 @@
           <q-icon color="white" name="backup" style="font-size: 6em"></q-icon>
         </q-item-section>
         <q-item-section class="text-white">
-          Оптимизация структуры сайта для лучшей его обработки поисковыми системами, что улучшает его позиции в поисковой выдаче,   увеличивая посещаемость.
+          Оптимизация структуры приложения, запросов к БД.
         </q-item-section>
       </q-item>
     </q-list>
